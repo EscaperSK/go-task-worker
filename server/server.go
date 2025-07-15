@@ -39,7 +39,7 @@ func handle(context *gin.Context) {
 	}
 
 	if req.Probability > 100 {
-		context.String(http.StatusBadRequest, "Probability must be less than 100")
+		context.String(http.StatusBadRequest, "Probability must be less than or equal to 100")
 		return
 	}
 
